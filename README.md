@@ -1,7 +1,7 @@
-# <font color=blue>ch2</font>
+# ch2
 ## canvas 坐标
 ![canvas](./static/canvas1.png)<br/><br/>
- canvas的坐标横轴为x轴(正方向朝右),纵轴为y轴(正方向朝下)
+ >canvas的坐标横轴为x轴(正方向朝右),纵轴为y轴(正方向朝下)
  ## 绘图简单步骤
 ![canvas](./static/canvas2.png)<br/><br/>
 1. 获取canvas: `var canvas = doucment.getElementById('webgl')`
@@ -13,6 +13,5 @@
 ## 要点
 1. WebGL程序包括运行在浏览器中的Javascript和运行在WebGL系统的着色器程序俩个部分
 2. vec4 四个浮点数 组成的矢量(也称为齐次坐标是四维的,通常把最后一个变量设置为1.0代表三维)
-3. 顶点着色器两个内置变量: 
-<font color=#0099ff>gl_Position, gl_PointSize</font>
-4. 片元着色器内置变量:  <font color=#0099ff>gl_FragColor</font>
+3. 顶点着色器两个内置变量: `gl_Position, gl_PointSize`
+4. 片元着色器内置变量:  `gl_FragColor`
