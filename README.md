@@ -14,8 +14,15 @@
 4. 设置背景色: `gl.clearColor(0.0, 0.0, 0.0, 1.0)`
 5. 清空canvas: `gl.clear(gl.COLOR_BUFFER_BIT)`
 6. 绘图: `gl.drawArrays(gl.POINTS, 0, 1)`
+## 使用变量
+1. 声明: `attribute vec4 a_Position;\n`
+2. 将变量赋值给gl_Position: `gl_Position = a_Position;\n`
+3. 向变量传输数据: 
+>`var a_Position = gl.getAttribLocation(gl.program, 'a_Position')`
+>`gl.vertexAttrib3f(a_Position, 0.0, 0.0, 0.0)`
 ## 要点
 1. WebGL程序包括运行在浏览器中的Javascript和运行在WebGL系统的着色器程序俩个部分
 2. vec4 四个浮点数 组成的矢量(也称为齐次坐标是四维的,通常把最后一个变量设置为1.0代表三维)
 3. 顶点着色器两个内置变量: `gl_Position, gl_PointSize`
 4. 片元着色器内置变量:  `gl_FragColor`
+5. attribute变量: 传输与顶点相关的数据, unifrom变量传输对所有顶点相同的数据(或与顶点无关)
