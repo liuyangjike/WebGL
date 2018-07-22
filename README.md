@@ -27,6 +27,7 @@
 4. 片元着色器内置变量:  `gl_FragColor`
 5. attribute变量: 传输与顶点相关的数据, unifrom变量传输对所有顶点相同的数据(或与顶点无关)
 <br/>
+
 # ch3
 ## 绘制多点(使用缓冲区)
 1. 创建缓冲区对象: `var vertexBuffer = gl.creteBuffer()`
