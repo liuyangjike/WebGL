@@ -18,7 +18,7 @@
 1. 声明: `attribute vec4 a_Position;\n`
 2. 将变量赋值给gl_Position: `gl_Position = a_Position;\n`
 3. 向变量传输数据: 
->`var a_Position = gl.getAttribLocation(gl.program, 'a_Position')`
+>`var a_Position = gl.getAttribLocation(gl.program, 'a_Position')`<br/>
 >`gl.vertexAttrib3f(a_Position, 0.0, 0.0, 0.0)`
 ## 要点
 1. WebGL程序包括运行在浏览器中的Javascript和运行在WebGL系统的着色器程序俩个部分
