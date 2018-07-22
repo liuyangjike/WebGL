@@ -26,3 +26,13 @@
 3. 顶点着色器两个内置变量: `gl_Position, gl_PointSize`
 4. 片元着色器内置变量:  `gl_FragColor`
 5. attribute变量: 传输与顶点相关的数据, unifrom变量传输对所有顶点相同的数据(或与顶点无关)
+<br/>
+# ch3
+## 绘制多点(使用缓冲区)
+1. 创建缓冲区对象: `var vertexBuffer = gl.creteBuffer()`
+2. 绑定缓冲区对象: `gl.bindBuffer(gl.ARRAY_BUFFER, vextexBuffer)`
+3. 将数据写入缓冲区: `gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW)`
+4. 将缓冲区对象分配给一个attribute变量(多点一次性分配)): `gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, 0, 0)`
+5. 开启attribute变量(为了使顶点着色器能够访问缓冲区数据):  `gl.enableVertexAttribArray(a_Position)`
+## 要点
+1. `new Float32Array([])`类型化数组: `BYTES_PER_ELEMENT` 数组中每个元素所占的字节数
