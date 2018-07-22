@@ -1,6 +1,6 @@
 # ch2
 ## 坐标图
-![canvas](./static/canvas1.png)<br/>
+ >![canvas](./static/canvas1.png)<br/>
  >canvas的坐标横轴为x轴(正方向朝右),纵轴为y轴(正方向朝下)<br/>
 ![canvas](./static/canvas3.png)<br/>
  >webgl的右手坐标<br/>
