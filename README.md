@@ -1,7 +1,11 @@
 # ch2
-## canvas 坐标
-![canvas](./static/canvas1.png)<br/><br/>
+## 坐标图
+![canvas](./static/canvas1.png)<br/>
  >canvas的坐标横轴为x轴(正方向朝右),纵轴为y轴(正方向朝下)
+![canvas](./static/canvas3.png)<br/>
+ >webgl的右手坐标
+![canvas](./static/canvas4.png)<br/>
+>对应坐标
  ## 绘图简单步骤
 ![canvas](./static/canvas2.png)<br/><br/>
 1. 获取canvas: `var canvas = doucment.getElementById('webgl')`
