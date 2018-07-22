@@ -1,13 +1,13 @@
 # ch2
 ## 坐标图
-![canvas](./static/canvas1.png)<br/><br/>>
- >canvas的坐标横轴为x轴(正方向朝右),纵轴为y轴(正方向朝下)
-![canvas](./static/canvas3.png)<br/><br/>
- >webgl的右手坐标
+![canvas](./static/canvas1.png)<br/>
+ >canvas的坐标横轴为x轴(正方向朝右),纵轴为y轴(正方向朝下)<br/>
+![canvas](./static/canvas3.png)<br/>
+ >webgl的右手坐标<br/>
 ![canvas](./static/canvas4.png)<br/><br/>>
->对应坐标
+>对应坐标<br/>
  ## 绘图简单步骤
-![canvas](./static/canvas2.png)<br/><br/>
+![canvas](./static/canvas2.png)<br/>
 1. 获取canvas: `var canvas = doucment.getElementById('webgl')`
 2. 获取上下文: `var gl = getWebGLContext(canvas)`
 3. 初始化着色器  `initShader(gl, VSHADER_SOURCE, FSHADER_SOURCE)`
