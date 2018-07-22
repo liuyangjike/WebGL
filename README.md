@@ -37,3 +37,6 @@
 5. 开启attribute变量(为了使顶点着色器能够访问缓冲区数据):  `gl.enableVertexAttribArray(a_Position)`
 ## 要点
 1. `new Float32Array([])`类型化数组: `BYTES_PER_ELEMENT` 数组中每个元素所占的字节数
+## WebGl绘制基本图形
+>`gl.drawArrays(gl.TRIANGLES, 0, n)`
+>![canvas](./static/canvas5.png)<br/>
