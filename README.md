@@ -40,3 +40,4 @@
 ## WebGl绘制基本图形
 >`gl.drawArrays(gl.TRIANGLES, 0, n)`
 >![canvas](./static/canvas5.png)<br/>
+# ch4
