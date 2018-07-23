@@ -40,11 +40,23 @@
 ## WebGl绘制基本图形
 >`gl.drawArrays(gl.TRIANGLES, 0, n)`
 >![canvas](./static/canvas5.png)<br/>
+
 # ch4
 ## 变换矩阵步骤
 1. 为旋转矩阵创建Matrix对象: `var xformMatrix = new Matrix4()`
 2. 将xformMatrix设置为旋转矩阵: `xformMatrix.setRotate(ANGLE, 0, 0, 1)`
 3. 将旋转矩阵传输给顶点着色器: `gl.uniformMatrix4fv(u_xformMatrix, false, xformMatrix.elements)`
+4. varying变量的作用是从顶点着色器向片元着色器传输数据
 ## 要点
 1. `gl.uniformMatrix4fv()`的最后一个参数一定要是类型化数组
 2. 将变换全部复合在一起的矩阵称为模型矩阵
+3. 当有多种数据传输时,可以使用多个缓冲区存不同数据或者使用一个缓冲区进行数据的交错组织
+## 一个缓冲区处理多种数据
+ >![canvas](./static/canvas6.png)<br/>
+ ## 传输颜色
+ >`varying vec4 v_Color;\n` +
+ >`.......`
+ >`v_Color = a_Color;\n`+
+ >`.......`
+ >`gl_FragColor = v_Color;\n`+
+
