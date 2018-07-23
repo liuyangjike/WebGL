@@ -41,3 +41,10 @@
 >`gl.drawArrays(gl.TRIANGLES, 0, n)`
 >![canvas](./static/canvas5.png)<br/>
 # ch4
+## 变换矩阵步骤
+1. 为旋转矩阵创建Matrix对象: `var xformMatrix = new Matrix4()`
+2. 将xformMatrix设置为旋转矩阵: `xformMatrix.setRotate(ANGLE, 0, 0, 1)`
+3. 将旋转矩阵传输给顶点着色器: `gl.uniformMatrix4fv(u_xformMatrix, false, xformMatrix.elements)`
+## 要点
+1. `gl.uniformMatrix4fv()`的最后一个参数一定要是类型化数组
+2. 将变换全部复合在一起的矩阵称为模型矩阵
