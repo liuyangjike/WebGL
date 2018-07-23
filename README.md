@@ -54,9 +54,9 @@
 ## 一个缓冲区处理多种数据
  >![canvas](./static/canvas6.png)<br/>
  ## 传输颜色
- >`varying vec4 v_Color;\n` +
+ >`varying vec4 v_Color;\n` +<br/>
  >`.......`
- >`v_Color = a_Color;\n`+
- >`.......`
- >`gl_FragColor = v_Color;\n`+
+ >`v_Color = a_Color;\n`+<br/>
+ >`.......`<br/>
+ >`gl_FragColor = v_Color;\n`+<br/>
 
