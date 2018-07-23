@@ -81,3 +81,7 @@
 >>4. `var viewMatrix = new Matrix4()`<br/>
 >>5. `viewMatrix.setLookAt(0.20, 0.25, 0.25, 0, 0, 0, 0, 1, 0)` 设置视点,视线和上方向<br/>
 >>6. `gl.uniformMatrix4fv(u_ViewMatrix, false, viewMatrix.elements)`  传输<br/>
+## 要点
+1. 将平移,缩放等基本变换矩阵或它们的组合称为模型矩阵
+2. `<视图矩阵> x <模型矩阵> x <原始顶点坐标>`
+3. 也可以将视图矩阵和模型矩阵相乘的结果成为`模型视图矩阵`:  `var modelViewMatrix = viewMatrix.multiply(modelMatrix)` 
