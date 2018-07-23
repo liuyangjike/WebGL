@@ -55,7 +55,7 @@
  >![canvas](./static/canvas6.png)<br/>
  ## 传输颜色
  >`varying vec4 v_Color;\n` +<br/>
- >`.......`
+ >`.......`<br/>
  >`v_Color = a_Color;\n`+<br/>
  >`.......`<br/>
  >`gl_FragColor = v_Color;\n`+<br/>
