@@ -68,3 +68,16 @@
 2. 存储限定字`Attribute`变量: 只能出现在顶点着色器中,“逐顶点”
 3. `uniform`变量: 逐片元或顶点共用
 4. `varying`: 从顶点着色器向片元着色器传输数据, 但变量一定是同名和同类型的varying变量
+# ch7
+## 视图矩阵
+>视图矩阵表示观察者的状态:`观察者的视点`,`观察点`,`上方向`<br/>
+>![canvas](./static/canvas6.png)<br/>
+>视图矩阵步骤
+>>1. `uniform mat4 u_ViewMatrix;\n` 用来接收视图矩阵 <br/>
+>>`.......`<br/>
+>>2. `gl_Position = u_ViewMatrix * a_Position;\n` 视图矩阵与顶点坐标相乘<br/>
+>>`.......`<br/> 
+>>3. `var u_ViewMatrix = gl.getUniformLocation(gl.program, 'u_ViewMatrix)` 获取存储位置<br/>
+>>4. `var viewMatrix = new Matrix4()`<br/>
+>>5. `viewMatrix.setLookAt(0.20, 0.25, 0.25, 0, 0, 0, 0, 1, 0)` 设置视点,视线和上方向<br/>
+>>6. `gl.uniformMatrix4fv(u_ViewMatrix, false, viewMatrix.elements)`  传输<br/>
