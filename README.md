@@ -85,3 +85,8 @@
 1. 将平移,缩放等基本变换矩阵或它们的组合称为模型矩阵
 2. `<视图矩阵> x <模型矩阵> x <原始顶点坐标>`
 3. 也可以将视图矩阵和模型矩阵相乘的结果成为`模型视图矩阵`:  `var modelViewMatrix = viewMatrix.multiply(modelMatrix)` 
+## 鼠标或键盘控制思路
+1. 在main()里注册事件, 参数有:事件, gl, 顶点数, 视图矩阵储存位置, 视图矩阵`document.onkeydown = function(ev){keydown(ev, gl, n, u_ViewMatrix)}`
+2. 在main()里画初始的(还没调用keydown函数): `draw(gl, n, u_ViewMatrix, viewMatrix)`
+3. 在keydown改变`viewMatrix.setLookAt()`参数, 最后调用draw画图
+4. 执行draw:传递viewMatrix,  `gl.drawArrays(gl.TRIANGLES, 0, n)`
